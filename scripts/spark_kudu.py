@@ -15,9 +15,9 @@ schema = StructType([StructField("dateandtime", StringType(), True),
                      StructField("sentiment", StringType(), True),
                      StructField("msgcomment", StringType(), True)])
 
-zk_broker = "YourHostName:2181"
+zk_broker = "10.0.1.51:2181"
 kafka_topic = "meetup_comment_ws"
-kudu_master = "YourHostName"
+kudu_master = "10.0.1.51"
 kudu_table = "impala::default.meetup_comment_sentiment"
 
 def getSqlContextInstance(sparkContext):
